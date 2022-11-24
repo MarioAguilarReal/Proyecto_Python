@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter as tk
 from tkinter import ttk
 import tkinter
 from tkinter import messagebox
@@ -10,16 +11,25 @@ def con():
         messagebox.showinfo(title="Error", message="Uno o ambos espacios no fueron llenados")
     elif u==user and p==password:
         messagebox.showinfo(title="Bienvenido", message=" Cool ")
-        ventana.destroy()
-        ventana2 = Tk()
+        ventana2 = Toplevel(ventana)
         ventana2.geometry("600x400")
         ventana2.title("Bienvenido")
+        var = IntVar()
         bg2 = PhotoImage(file= "bg.png")
         my_label2 = Label(ventana2, image=bg2)
         my_label2.place(x=0, y=0, relwidth=1, relheight=1)
-
         lbl_img2 = Label(ventana2, image=img)
         lbl_img2.place(relx=0.38, rely=0.1)
+        
+        R1 = Radiobutton(ventana2, text="Rutina 1", fg="white", bg="black", padx = 20, variable=var, value=1)
+        R1.pack(anchor=W)
+
+        R2 = Radiobutton(ventana2, text="Rutina 2", fg="white", bg="black", padx = 20, variable=var, value=2)
+        R2.pack(anchor=W)
+        
+        R3 = Radiobutton(ventana2, text="Rutina 3", fg="white", bg="black", padx = 20, variable=var, value=2)
+        R3.pack(anchor=W)
+        ventana2.mainloop()
         
         
     else:
