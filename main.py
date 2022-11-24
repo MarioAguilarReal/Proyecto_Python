@@ -10,6 +10,18 @@ def con():
         messagebox.showinfo(title="Error", message="Uno o ambos espacios no fueron llenados")
     elif u==user and p==password:
         messagebox.showinfo(title="Bienvenido", message=" Cool ")
+        ventana.destroy()
+        ventana2 = Tk()
+        ventana2.geometry("600x400")
+        ventana2.title("Bienvenido")
+        bg2 = PhotoImage(file= "bg.png")
+        my_label2 = Label(ventana2, image=bg2)
+        my_label2.place(x=0, y=0, relwidth=1, relheight=1)
+
+        lbl_img2 = Label(ventana2, image=img)
+        lbl_img2.place(relx=0.38, rely=0.1)
+        
+        
     else:
         messagebox.showinfo(title="Invalido", message="Su usuario o contrasena son incorrectos")
 
@@ -19,7 +31,7 @@ password="RoboDog"
 ventana = Tk()
 ventana.geometry("600x400")
 ventana.title("Login")
-ventana.iconbitmap('Login.ico')
+##ventana.iconbitmap('Login.ico')
 
 bg = PhotoImage(file= "bg.png")
 my_label = Label(ventana, image=bg)
