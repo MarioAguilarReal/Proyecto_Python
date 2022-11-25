@@ -3,6 +3,8 @@ import tkinter as tk
 from tkinter import ttk
 import tkinter
 from tkinter import messagebox
+from rutinas import *
+
 
 def con():
     u = (txtu.get())
@@ -21,13 +23,13 @@ def con():
         lbl_img2 = Label(ventana2, image=img)
         lbl_img2.place(relx=0.38, rely=0.1)
         
-        R1 = Radiobutton(ventana2, text="Rutina 1", fg="white", bg="black", padx = 20, variable=var, value=1)
+        R1 = Radiobutton(ventana2, text="Rutina 1", fg="white", bg="black", padx = 20, variable=var, value=1, command=rutina1)
         R1.pack(anchor=W)
 
-        R2 = Radiobutton(ventana2, text="Rutina 2", fg="white", bg="black", padx = 20, variable=var, value=2)
+        R2 = Radiobutton(ventana2, text="Rutina 2", fg="white", bg="black", padx = 20, variable=var, value=2, command=rutina2)
         R2.pack(anchor=W)
         
-        R3 = Radiobutton(ventana2, text="Rutina 3", fg="white", bg="black", padx = 20, variable=var, value=2)
+        R3 = Radiobutton(ventana2, text="Rutina 3", fg="white", bg="black", padx = 20, variable=var, value=2, command=rutina3)
         R3.pack(anchor=W)
         ventana2.mainloop()
         
