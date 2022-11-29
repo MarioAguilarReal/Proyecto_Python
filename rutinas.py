@@ -6,7 +6,7 @@ servo=Servo()
 def rutina1():
     print("[1] Sientate; Da la pata!")
     try:
-        for i in range(45):
+        for i in range(50):
         # Sentar
             # Muslos
             servo.setServoAngle(6,90+i)
@@ -14,6 +14,12 @@ def rutina1():
             # Corvejón     
             servo.setServoAngle(5,90+i)
             servo.setServoAngle(10,90-i) 
+
+            time.sleep(0.01)
+        for i in range(5):
+            # Muslos
+            servo.setServoAngle(6,140+i)
+            servo.setServoAngle(9,40-i)
 
             time.sleep(0.01)
         for i in range(20):
@@ -38,6 +44,15 @@ def rutina1():
 
             time.sleep(0.01)   
         servo.setServoAngle(2,40)
+        time.sleep(5)
+        servo.setServoAngle(5,90)
+        servo.setServoAngle(6,90)
+        servo.setServoAngle(13,90)
+        servo.setServoAngle(12,90)
+        servo.setServoAngle(10,90)
+        servo.setServoAngle(9,90)
+        servo.setServoAngle(2,90)
+        servo.setServoAngle(3,90)
         print ("\nEnd of program")
     except KeyboardInterrupt:
         print ("\nEnd of program")
