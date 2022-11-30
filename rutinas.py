@@ -1,6 +1,8 @@
 import time
 from Servo import *
+from Led import *
 servo=Servo()
+led=Led()
 
 # Sentado y dar la pata
 def rutina1():
@@ -8,6 +10,7 @@ def rutina1():
     try:
         for i in range(50):
         # Sentar
+            led.colorWipe(led.strip, Color(180+i, 0+i, 0)) 
             # Muslos
             servo.setServoAngle(6,90+i)
             servo.setServoAngle(9,90-i)
