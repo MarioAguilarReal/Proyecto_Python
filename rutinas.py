@@ -8,9 +8,9 @@ led=Led()
 def rutina1():
     print("[1] Sientate; Da la pata!")
     try:
+        led.colorWipe(led.strip, Color(180+i, 0+i, 0)) 
         for i in range(50):
         # Sentar
-            led.colorWipe(led.strip, Color(180+i, 0+i, 0)) 
             # Muslos
             servo.setServoAngle(6,90+i)
             servo.setServoAngle(9,90-i)
