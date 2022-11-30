@@ -51,14 +51,8 @@ def rutina1():
             time.sleep(0.01)   
         servo.setServoAngle(2,80)
         time.sleep(5)
-        servo.setServoAngle(5,90)
-        servo.setServoAngle(6,90)
-        servo.setServoAngle(13,90)
-        servo.setServoAngle(12,90)
-        servo.setServoAngle(10,90)
-        servo.setServoAngle(9,90)
-        servo.setServoAngle(2,90)
-        servo.setServoAngle(3,90)
+        
+        regresar()
         print ("\nEnd of program")
     except KeyboardInterrupt:
         print ("\nEnd of program")
@@ -68,51 +62,61 @@ def rutina2():
     print("[2] Posicion de Juego")
     try:
         for i in range(60):
-            servo.setServoAngle(6,90-i)#Estirar hacia adelane para izquierda con el hombro (trasera)
-            servo.setServoAngle(9,90+i)#Estirar hacia adelante pata derecha con el homobro (Trasera)
-            servo.setServoAngle(5,90-i)#Estirar rodilla izquierda (trasera)
-            servo.setServoAngle(10,90+i)#Estirar rodilla deracha (trasera)
+        # Estirar hacia delante
+            # Muslo
+            servo.setServoAngle(6,90-i)
+            servo.setServoAngle(9,90+i)
+            # Corvejón
+            servo.setServoAngle(5,90-i)
+            servo.setServoAngle(10,90+i)
+
             time.sleep(0.01)
         time.sleep(5.00)
         for i in range(90):
-            servo.setServoAngle(3,90-i)#Estirar hacia adelane para izquierda con el hombro (delantera)
-            servo.setServoAngle(12,90+i)#Estirar hacia adelante pata derecha con el homobro (delantera)
-            servo.setServoAngle(2,90-i)#Estirar rodilla izquierda (delantera)
-            servo.setServoAngle(13,90+i)#Estirar rodilla deracha (delantera)
+        # Estirar hacia delante
+            # Brazo
+            servo.setServoAngle(3,90-i)
+            servo.setServoAngle(12,90+i)
+            # Codo
+            servo.setServoAngle(2,90-i)
+            servo.setServoAngle(13,90+i)
+
             time.sleep(0.01)
         time.sleep(3.00)
         for i in range(30):
+            # Subir cabeza
             servo.setServoAngle(15, 90+i)
+
             time.sleep(0.01)
         time.sleep(3.00)
-        for i in range(40):
+        for i in range(20):
+        # Abrir patitas
+            # Ingle
             servo.setServoAngle(4,90-i)
             servo.setServoAngle(11,90+i)
+            # Hombro
             servo.setServoAngle(7,90-i)
             servo.setServoAngle(8,90+i)
+
             time.sleep(0.01)
         time.sleep(2.00)
+        for i in range(10):
+        # Estirar codos
+            servo.setServoAngle(2,0-i)
+            servo.setServoAngle(13,180+i)
+            servo.setServoAngle(5,30-i)
+            servo.setServoAngle(10,150+i)
+
+            time.sleep(0.01)
         for i in range(45):
+        # Doblar muslos
             servo.setServoAngle(6,30+i)
             servo.setServoAngle(9,150-i)
             time.sleep(0.01)
-        time.sleep(1.00)
-        for i in range(25):
-            servo.setServoAngle(5,30+i)
-            servo.setServoAngle(10,150-i)
-            time.sleep(0.01)
+      
         time.sleep(5)
-
         servo.setServoAngle(15,90)
-        servo.setServoAngle(5,90)
-        servo.setServoAngle(6,90)
-        servo.setServoAngle(13,90)
-        servo.setServoAngle(12,90)
-        servo.setServoAngle(10,90)
-        servo.setServoAngle(9,90)
-        servo.setServoAngle(2,90)
-        servo.setServoAngle(3,90)
-
+        regresar()
         print ("\nEnd of program")
     except KeyboardInterrupt:
         print ("\nEnd of program")
@@ -136,3 +140,13 @@ def rutina3():
     except KeyboardInterrupt:
         print ("\nEnd of program")
 
+def regresar():
+    servo.setServoAngle(5,90)
+    servo.setServoAngle(6,90)
+    servo.setServoAngle(13,90)
+    servo.setServoAngle(12,90)
+    servo.setServoAngle(10,90)
+    servo.setServoAngle(9,90)
+    servo.setServoAngle(2,90)
+    servo.setServoAngle(3,90)
+ 
