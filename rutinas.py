@@ -124,9 +124,15 @@ def rutina2():
 def rutina3():
     print("Hola soy la rutina 3")
     try:
-        for i in range(60):
+        for i in range(30):
             
-            servo.setServoAngle(6,90-i)#Estirar hacia adelane para izquierda con el hombro (trasera)
+            servo.setServoAngle(7,90-i)#Estirar hacia adelante pata izquierda con el hombro (trasera)
+            servo.setServoAngle(8,90+i)#Estirar hacia adelante pata derecha con el homobro (Trasera)
+            
+            time.sleep(0.001)
+        for i in range(30):
+            
+            servo.setServoAngle(6,90-i)#Estirar hacia adelante pata izquierda con el hombro (trasera)
             servo.setServoAngle(9,90+i)#Estirar hacia adelante pata derecha con el homobro (Trasera)
             
             time.sleep(0.01)
@@ -135,10 +141,49 @@ def rutina3():
             servo.setServoAngle(5,90-i)#Estirar rodilla izquierda (trasera)
             servo.setServoAngle(10,90+i)#Estirar rodilla deracha (trasera)
             
-            time.sleep(0.01)
+            time.sleep(0.09)
+        for i in range(90):
+            
+            servo.setServoAngle(5,0+i)#cerrar rodilla izquierda (trasera)
+            servo.setServoAngle(10,180-i)#cerrar rodilla deracha (trasera)
+            
+            time.sleep(0.09)
+        for i in range(90):
+            
+            servo.setServoAngle(5,90-i)#Estirar rodilla izquierda (trasera)
+            servo.setServoAngle(10,90+i)#Estirar rodilla deracha (trasera)
+            
+            time.sleep(0.09)
+        for i in range(90):
+            
+            servo.setServoAngle(5,0+i)#cerrar rodilla izquierda (trasera)
+            servo.setServoAngle(10,180-i)#cerrar rodilla deracha (trasera)
+            
+            time.sleep(0.09)
+        for i in range(90):
+            
+            servo.setServoAngle(5,90-i)#Estirar rodilla izquierda (trasera)
+            servo.setServoAngle(10,90+i)#Estirar rodilla deracha (trasera)
+            
+            time.sleep(0.09)
+        for i in range(90):
+            
+            servo.setServoAngle(5,0+i)#cerrar rodilla izquierda (trasera)
+            servo.setServoAngle(10,180-i)#cerrar rodilla deracha (trasera)
+            
+            time.sleep(0.09)
+        for i in range(30):
+            
+            servo.setServoAngle(7,60+i)#Estirar hacia adelante pata izquierda con el hombro (trasera)
+            servo.setServoAngle(8,120-i)#Estirar hacia adelante pata derecha con el homobro (Trasera)
+            
+            time.sleep(0.10)
+
+        
         print ("\nEnd of program")
     except KeyboardInterrupt:
         print ("\nEnd of program")
+
 
 def regresar():
     servo.setServoAngle(5,90)
