@@ -179,7 +179,7 @@ def rutina3():
             
             time.sleep(0.10)
 
-        
+        regresar()
         print ("\nEnd of program")
     except KeyboardInterrupt:
         print ("\nEnd of program")
