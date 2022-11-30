@@ -24,7 +24,7 @@ def rutina1():
             time.sleep(0.01)
         for i in range(15):
             # Corvejón     
-            servo.setServoAngle(5,130-i)
+            servo.setServoAngle(5,125-i)
             servo.setServoAngle(10,40+i)
 
             time.sleep(0.01)
