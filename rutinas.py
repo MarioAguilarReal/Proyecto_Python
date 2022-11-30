@@ -20,9 +20,12 @@ def rutina1():
             # Muslos
             servo.setServoAngle(6,140+i)
             servo.setServoAngle(9,40-i)
+
+            time.sleep(0.01)
+        for i in range(15):
             # Corvejón     
             servo.setServoAngle(5,140-i)
-            servo.setServoAngle(10,43+i)
+            servo.setServoAngle(10,50+i)
 
             time.sleep(0.01)
         for i in range(20):
