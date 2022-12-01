@@ -165,8 +165,8 @@ def rutina2():
             servo.setServoAngle(12,110-i)
             servo.setServoAngle(4,70+i)
             servo.setServoAngle(11,110-i)
-            servo.setServoAngle(7,70+i)
-            servo.setServoAngle(8,110-i)
+            servo.setServoAngle(7,74+i)
+            servo.setServoAngle(8,114-i)
         
             time.sleep(0.01)
         led.colorWipe(led.strip, Color(0, 0, 0))
