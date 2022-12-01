@@ -43,7 +43,7 @@ password="RoboDog"
 ventana = Tk()
 ventana.geometry("600x400")
 ventana.title("Login")
-ventana.iconbitmap('Login.ico')
+##ventana.iconbitmap('Login.ico')
 
 bg = PhotoImage(file= "bg.png")
 my_label = Label(ventana, image=bg)
