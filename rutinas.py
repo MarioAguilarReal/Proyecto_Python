@@ -57,7 +57,54 @@ def rutina1():
 
         #Regresar a 90°
         led.colorWipe(led.strip, Color(255, 255, 255),20) 
-        for i in range(35):
+        ##Regreso el codo
+        servo.setServoAngle(2, 20)
+        # Regresa la pata
+        for i in range(65):
+            servo.setServoAngle(3,45+i)
+            
+        for i in range(50):
+            # Codo
+            servo.setServoAngle(2,20+i)
+            servo.setServoAngle(13,160-i)
+
+            time.sleep(0.01)
+        for i in range(20):
+            # Codo
+            servo.setServoAngle(2,70+i)
+            servo.setServoAngle(13,110-i)
+            # Brazo
+            servo.setServoAngle(3,110-i)
+            servo.setServoAngle(12,70+i)
+            time.sleep(0.01)
+            
+        for i in range(15):
+            # Corvejón     
+            servo.setServoAngle(5,110+i)
+            servo.setServoAngle(10,55-i)
+            time.sleep(0.01)
+        
+        for i in range(5):
+            # Muslos
+            servo.setServoAngle(6,145-i)
+            servo.setServoAngle(9,35+i)
+            time.sleep(0.01)
+            
+        for i in range(50):
+        # Sentar
+            # Muslos
+            servo.setServoAngle(6,140-i)
+            servo.setServoAngle(9,40+i)
+            # Corvejón     
+            servo.setServoAngle(5,140-i)
+            servo.setServoAngle(10,40+i) 
+
+            time.sleep(0.01)
+        
+            
+            
+        """for i in range(35):
+            
             servo.setServoAngle(10,55+i)
             servo.setServoAngle(13,160-i)
             servo.setServoAngle(3,45+i)
@@ -78,7 +125,7 @@ def rutina1():
             servo.setServoAngle(13,100-i)
             servo.setServoAngle(3,80+i)
 
-            time.sleep(0.01)
+            time.sleep(0.01)"""
         led.colorWipe(led.strip, Color(0, 0, 0))
         print ("\nEnd of program")
     except KeyboardInterrupt:
