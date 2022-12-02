@@ -91,41 +91,15 @@ def rutina1():
             time.sleep(0.01)
             
         for i in range(50):
-        # Sentar
+        # parar
             # Muslos
             servo.setServoAngle(6,140-i)
             servo.setServoAngle(9,40+i)
             # Corvejón     
             servo.setServoAngle(5,140-i)
             servo.setServoAngle(10,40+i) 
-
             time.sleep(0.01)
         
-            
-            
-        """for i in range(35):
-            
-            servo.setServoAngle(10,55+i)
-            servo.setServoAngle(13,160-i)
-            servo.setServoAngle(3,45+i)
-            servo.setServoAngle(6,145-i)
-            servo.setServoAngle(9,35+i)
-
-            time.sleep(0.01)
-        for i in range(20):
-            servo.setServoAngle(13,125-i)
-            servo.setServoAngle(5,110-i)
-            servo.setServoAngle(12,70+i)
-            servo.setServoAngle(6,110-i)
-            servo.setServoAngle(9,70+i)
-
-            time.sleep(0.01)
-        for i in range(10):
-            servo.setServoAngle(2,80+i)
-            servo.setServoAngle(13,100-i)
-            servo.setServoAngle(3,80+i)
-
-            time.sleep(0.01)"""
         led.colorWipe(led.strip, Color(0, 0, 0))
         print ("\nEnd of program")
     except KeyboardInterrupt:
@@ -212,10 +186,15 @@ def rutina2():
             servo.setServoAngle(12,110-i)
             servo.setServoAngle(4,70+i)
             servo.setServoAngle(11,110-i)
-            servo.setServoAngle(7,74+i)
-            servo.setServoAngle(8,114-i)
+            servo.setServoAngle(7,70+i)
+            servo.setServoAngle(8,110-i)
         
             time.sleep(0.01)
+        servo.setServoAngle(4,90)
+        servo.setServoAngle(11,90)
+        servo.setServoAngle(7,90)
+        servo.setServoAngle(8,90)
+        
         led.colorWipe(led.strip, Color(0, 0, 0))
         print ("\nEnd of program")
     except KeyboardInterrupt:
