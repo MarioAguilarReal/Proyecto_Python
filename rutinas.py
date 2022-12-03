@@ -1,6 +1,7 @@
 import time
 from Servo import *
 from Led import *
+from recto import *
 servo=Servo()
 led=Led()
 
@@ -99,6 +100,7 @@ def rutina1():
             servo.setServoAngle(5,140-i)
             servo.setServoAngle(10,40+i) 
             time.sleep(0.01)
+        recto()
         
         led.colorWipe(led.strip, Color(0, 0, 0))
         print ("\nEnd of program")
@@ -194,6 +196,7 @@ def rutina2():
         servo.setServoAngle(11,90)
         servo.setServoAngle(7,90)
         servo.setServoAngle(8,90)
+        recto()
         
         led.colorWipe(led.strip, Color(0, 0, 0))
         print ("\nEnd of program")
@@ -258,6 +261,7 @@ def rutina3():
             servo.setServoAngle(8,120-i)#Estirar hacia adelante pata derecha con el homobro (Trasera)
             
             time.sleep(0.10)
+        recto()
 
         led.colorWipe(led.strip, Color(0, 0, 0))
         print ("\nEnd of program")
